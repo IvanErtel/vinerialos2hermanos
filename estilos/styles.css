@@ -1,0 +1,98 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+.vineria-logo{
+    width: 150px;
+    margin-left: 15px;
+}
+
+.form-inline{
+    margin-right: 15px;
+}
+
+.btn-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #0e0e0e;
+    font-size: large;
+    transition: font-size 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #6bc5e9;
+    font-size: 22px;
+}
+
+/* PRODUCTOS */
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container-productos{
+    max-height: 600px;
+    width: 90%;
+    overflow-y: auto;
+}
+
+/* CAROUSEL */
+#carouselLogos{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.carousel-item{
+    transition: transform 1s ease;
+    height: 150px;
+}
+.carousel-item img {
+    max-width: 90px; 
+    max-height: 90px; 
+    margin: auto;
+    margin-top: 25px;
+}
+
+/* FORMULARIO */
+
+#contacto{
+    padding-bottom: 60PX;
+}
+
+/* BOTON FLOTANTE WHATSAPP */
+
+.wpp-float{
+    position: fixed;
+    width: 50px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.wpp-float img {
+    width: 100%;
+    height: auto;
+}
+
+/* FOOTER */
+footer{
+    background-color: #f8f9fa;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}

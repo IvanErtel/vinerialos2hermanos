@@ -1,4 +1,6 @@
-*{
+@import url('variables.css');
+
+* {
     font-family: 'Roboto', sans-serif;
     padding: 0%;
     margin: 0%;
@@ -6,12 +8,16 @@
 }
 
 /* NAVBAR */
-.vineria-logo{
+.navbar {
+    background-color: var(--color-primario);
+}
+
+.vineria-logo {
     width: 150px;
     margin-left: 15px;
 }
 
-.form-inline{
+.form-inline {
     margin-right: 15px;
 }
 
@@ -36,63 +42,101 @@
     font-size: 22px;
 }
 
+/* TABLAS */
+.table{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
 /* PRODUCTOS */
-.flex-container{
+.flex-container {
     display: flex;
     justify-content: center;
 }
 
-.container-productos{
+.container-productos {
     max-height: 600px;
     width: 90%;
     overflow-y: auto;
 }
 
 /* CAROUSEL */
-#carouselLogos{
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+.owl-carousel{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.carousel-item{
-    transition: transform 1s ease;
-    height: 150px;
-}
-.carousel-item img {
-    max-width: 90px; 
-    max-height: 90px; 
-    margin: auto;
-    margin-top: 25px;
+.owl-carousel .item {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 200px; 
 }
 
-/* FORMULARIO */
-
-#contacto{
-    padding-bottom: 60PX;
+.owl-carousel .item img {
+    max-width: 40%;
+    max-height: 40%;
+    display: block;
 }
 
-/* BOTON FLOTANTE WHATSAPP */
+    /* CONTENEDOR DE CONTACTO */
+    #contenedor-contacto {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: var(--color-primario);
+    }
 
-.wpp-float{
-    position: fixed;
-    width: 50px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
+    #contacto,
+    #google-map {
+        width: calc(40% - 10px);       
+        padding: 10px;
+    }
 
-.wpp-float img {
-    width: 100%;
-    height: auto;
-}
+    #contacto {
+        height: 450px;
+    }
 
-/* FOOTER */
-footer{
-    background-color: #f8f9fa;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-}
+    #google-map iframe {
+        width: 100%;
+        height: 450px;
+    }
+
+    /* FORMULARIO */
+
+    #contacto {
+        padding-bottom: 60PX;
+    }
+
+    /* BOTON FLOTANTE WHATSAPP */
+
+    .wpp-float {
+        position: fixed;
+        width: 50px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    .wpp-float img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* FOOTER */
+    footer {
+        background-color: #f8f9fa;
+        padding: 20px;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+    }

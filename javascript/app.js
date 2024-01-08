@@ -1,5 +1,16 @@
 import productos from "./productos.js";
 
+$(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      items: 4, // número de logos que quieres mostrar a la vez
+      loop: true, // hace que el carrusel gire en un bucle continuo
+      autoplay: true, // activa la reproducción automática
+      autoplayTimeout: 2000, // tiempo en milisegundos antes de pasar al siguiente logo
+      autoplayHoverPause: true, // pausa el carrusel cuando el mouse pasa sobre él
+      autoplaySpeed: 1500 //velocidad de reproduccion automatica
+    });
+  });
+
 function mostrarProductos(productos) {
     const productListBody = document.getElementById("productListBody");
     productListBody.innerHTML = ''; // Limpiar la lista actual
@@ -28,8 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const searchButton = document.getElementById("searchButton");
     const searchInput = document.getElementById("searchInput");
-
-    searchButton.addEventListener('click', () => {
+    const handleSearch = () => {
         const searchText = searchInput.value.toLowerCase();
         const productosFiltrados = productos.filter(producto =>
             producto.descripcion.toLowerCase().includes(searchText) ||
@@ -38,7 +48,16 @@ document.addEventListener('DOMContentLoaded', function () {
         );
 
         mostrarProductos(productosFiltrados);
-
         searchInput.value = '';
-    })
-})
+    };
+
+    // para el botón de búsqueda
+    searchButton.addEventListener('click', handleSearch);
+
+    // para el campo de búsqueda
+    searchInput.addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) { // 13 es el código de tecla para Enter
+            handleSearch();
+        }
+    });
+});

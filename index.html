@@ -26,95 +26,182 @@
 <body>
 
     <!--NAVBAR-->
-    <nav class="navbar navbar-lg">
-        <a class="navbar-brand" href="#"><img src="./assets/vineria-Logo.png" alt="vineria los 2 hermanos"
-                class="vineria-logo"></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/vineria-Logo.png" alt="vineria los 2 hermanos" class="vineria-logo">
+        </a>
 
-        <div class="btn-nav ">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Quiénes Somos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-            </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Elementos de la barra de navegación -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <!-- Elemento (buscador) -->
+            <form class="form-inline">
+                <input class="form-control" type="search" placeholder="¿Qué estás buscando?" aria-label="Search"
+                    id="searchInput">
+                <button class="btn btn-outline-success" type="submit" id="searchButton">Buscar</button>
+            </form>
+
+            <!-- Enlaces a la derecha -->
+            <div class="navbar-nav">
+                <a class="nav-link active" href="#">Inicio</a>
+                <a class="nav-link active" href="./paginas/productos.html">Productos</a>
+                <a class="nav-link active" href="#">Quiénes Somos</a>
+                <a class="nav-link active" href="#contacto">Contacto</a>
+            </div>
         </div>
-
-        <form class="form-inline my-lg">
-            <input class="form-control" type="search" placeholder="Buscar Producto" aria-label="Buscar"
-                id="searchInput">
-            <button class="btn btn-outline" type="button" id="searchButton">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
     </nav>
-    
-    <!-- Ofertas -->
-        <div class="container mt-4 mb-4">
-            <h3>Ofertas de la Semana</h3>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card custom-card">
-                        <img src="./assets/freshmanzana15.jpg" alt="Imagen 1" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Fresh Manzana 1.5L</h5>
-                            <p class="card-text">Descripción de la tarjeta 1.</p>
+    <!--FIN NAVBAR-->
+
+    <!-- Card Ofertas -->
+    <div class="container mt-4 mb-4 container-ofertas">
+        <h3>Los productos más elegidos del mes</h3>
+        <div class="row row-ofertas ">
+            <!-- Inicio de la tarjeta de producto -->
+            <div class="col-md-3">
+                <div class="product-card-ofertas">
+                    <!-- Imagen del producto -->
+                   <a href="./paginas/productos.html">
+                    <img src="./assets/freshmanzana15.jpg" alt="Fresh Manzana 1.5L" class="product-img-ofertas">
+                   </a> 
+
+                    <!-- Cuerpo de la tarjeta -->
+                    <div class="product-body">
+                        <!-- Título del producto -->
+                        <h5 class="product-title">Fresh Manzana 1.5L</h5>
+
+                        <!-- Etiquetas de promociones y financiación -->
+                        <div class="product-promotions">
+                            <span class="badge badge-info">Pack 6 Unidades</span>
+                            <!-- <span class="badge badge-primary">3 CSI TARJETA MI CARREFOUR CRÉDITO</span> -->
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card custom-card">
-                        <img src="./assets/LeviteManzana500.webp" alt="Imagen 2" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Levite Manzana 500cc</h5>
-                            <p class="card-text">Descripción de la tarjeta 2.</p>
+
+                        <!-- Bloque de valoración con estrellas -->
+                        <div class="rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">☆</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card custom-card">
-                        <img src="./assets/PLACERMANZANA15.jpg" alt="Imagen 3" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Jugo Placer 1.5L</h5>
-                            <p class="card-text">Descripción de la tarjeta 3.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card custom-card">
-                        <img src="./assets/AGUACIMES600.webp" alt="Imagen 3" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Agua Cimes 600cc</h5>
-                            <p class="card-text">Descripción de la tarjeta 3.</p>
+
+                        <!-- Precios y descuentos -->
+                        <div class="pricing">
+                            <span class="price new-price">$2.999,00</span>
+                            <span class="price old-price">$3.399,00</span>
+                            <span class="discount">-10%</span>
+                            <span class="favorito">♥</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    
+            <!-- Fin de la tarjeta de producto -->
+            <!-- Inicio de la tarjeta de producto -->
+            <div class="col-md-3">
+                <div class="product-card-ofertas">
+                    <!-- Imagen del producto -->
+                    <a href="./paginas/productos.html">
+                        <img src="./assets/AGUACIMES600.webp" alt="Agua Cimes 600cc" class="product-img-ofertas">
+                    </a>
 
-    <!--Lista de Productos-->
-    <div class="flex-container">
-        <div class="mt-4 container-productos">
-            <h3>Listado de Produtos</h3>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Cod Articulo</th>
-                        <th>Descripcion</th>
-                        <th>Categoria</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-                <tbody id="productListBody"></tbody>
-            </table>
+                    <!-- Cuerpo de la tarjeta -->
+                    <div class="product-body">
+                        <!-- Título del producto -->
+                        <h5 class="product-title">Agua Cimes 60cc</h5>
+
+                        <!-- Etiquetas de promociones y financiación -->
+                        <div class="product-promotions">
+                            <span class="badge badge-info">Pack 6 Unidades</span>
+                            <!-- <span class="badge badge-primary">3 CSI TARJETA MI CARREFOUR CRÉDITO</span> -->
+                        </div>
+
+                        <!-- Bloque de valoración con estrellas -->
+                        <div class="rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">☆</span>
+                        </div>
+
+                        <!-- Precios y descuentos -->
+                        <div class="pricing">
+                            <span class="price new-price">$2.299,00</span>
+                            <span class="price old-price">$2.599,00</span>
+                            <span class="discount">-10%</span>
+                            <span class="favorito">♥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de la tarjeta de producto -->
+            <!-- Inicio de la tarjeta de producto -->
+            <div class="col-md-3">
+                <div class="product-card-ofertas">
+                    <!-- Imagen del producto -->
+                    <a href="./paginas/productos.html">
+                        <img src="./assets/CIMESPOMELO600.jpg" alt="Fresh Manzana 1.5L" class="product-img-ofertas">
+                    </a>
+                    <div class="product-body">
+                        <h5 class="product-title">Cimes Pomelo 600cc</h5>
+                        <div class="product-promotions">
+                            <span class="badge badge-info">Pack 6 Unidades</span>
+                        </div>
+                        <div class="rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                        <div class="pricing">
+                            <span class="price new-price">$2.999,00</span>
+                            <span class="price old-price">$3.399,00</span>
+                            <span class="discount">-10%</span>
+                            <span class="favorito">♥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de la tarjeta de producto -->
+            <!-- Inicio de la tarjeta de producto -->
+            <div class="col-md-3">
+                <div class="product-card-ofertas">
+                    <!-- Imagen del producto -->
+                    <a href="./paginas/productos.html">
+                        <img src="./assets/LeviteManzana500.webp" alt="Fresh Manzana 1.5L" class="product-img-ofertas">
+                    </a>
+
+                    <div class="product-body">
+                        <h5 class="product-title">Levite Manzana 500cc</h5>
+                        <div class="product-promotions">
+                            <span class="badge badge-info">Pack 6 Unidades</span>
+                        </div>
+                        <div class="rating">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">☆</span>
+                        </div>
+
+                        <!-- Precios y descuentos -->
+                        <div class="pricing">
+                            <span class="price new-price">$2.799,00</span>
+                            <span class="price old-price">$2.999,00</span>
+                            <span class="discount">-10%</span>
+                            <span class="favorito">♥</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de la tarjeta de producto -->
         </div>
     </div>
-
 
     <!--Carrousel Logos-->
     <div class="owl-carousel">
@@ -127,8 +214,254 @@
         <div class="item"><img src="./assets/quilmes.png" alt="Logo 6"></div>
         <div class="item"><img src="./assets/navarro.png" alt="Logo 7"></div>
         <div class="item"><img src="./assets/chandon.png" alt="Logo 8"></div>
-        <!-- ... otros logos ... -->
     </div>
+ <!-- Carrusel de Productos -->
+ <div class="owl-carousel productos">
+    <!-- bloque card carousel -->
+    <div class="item-carousel">
+        <div class="col-md-3">
+            <div class="product-card-carousel">
+                <!-- Imagen del producto -->
+                <a href="./paginas/productos.html">
+                    <img src="./assets/LeviteManzana500.webp" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+                </a>
+
+                <div class="product-body-carousel">
+                    <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                    <div class="product-promotions-carousel">
+                        <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                    </div>
+                    <div class="rating-carousel">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">☆</span>
+                    </div>
+
+                    <!-- Precios y descuentos -->
+                    <div class="pricing-carusel">
+                        <span class="price new-price">$2.799,00</span>
+                        <span class="price old-price">$2.999,00</span>
+                        <span class="discount">-10%</span>
+                        <span class="favorito">♥</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/aguaManaos6L.png" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/freshpera15.jpg" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/aguaManaos2L.png" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/Levitepera500.webp" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/BRIOPOMELO15.jpg" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/AguaManaos500.webp" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    <div class="item-carousel"><div class="col-md-3">
+        <div class="product-card-carousel">
+            <!-- Imagen del producto -->
+            <a href="./paginas/productos.html">
+                <img src="./assets/AGUACIMES600.webp" alt="Fresh Manzana 1.5L" class="product-img-carousel">
+            </a>
+
+            <div class="product-body-carousel">
+                <h5 class="product-title-carousel">Levite Manzana 500cc</h5>
+                <div class="product-promotions-carousel">
+                    <span class="badge-carousel badge-info">Pack 6 Unidades</span>
+                </div>
+                <div class="rating-carousel">
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star filled">★</span>
+                    <span class="star">☆</span>
+                </div>
+
+                <!-- Precios y descuentos -->
+                <div class="pricing-carusel">
+                    <span class="price new-price">$2.799,00</span>
+                    <span class="price old-price">$2.999,00</span>
+                    <span class="discount">-10%</span>
+                    <span class="favorito">♥</span>
+                </div>
+            </div>
+        </div>
+    </div></div>
+</div>
+<!-- FIN Carrusel de Productos -->
 
     <!-- Formulario de Contacto -->
 

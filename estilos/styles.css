@@ -6,80 +6,238 @@
     margin: 0%;
     box-sizing: border-box;
 }
-body, html {
+
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
-/* NAVBAR */
-.navbar {
-    background-color: var(--color-primario);
+
+/* NAV NUEVO */
+/* Estilos para el logo */
+.navbar-brand .vineria-logo {
+    height: 85px;
 }
 
-.vineria-logo {
-    width: 100px;
-    margin-left: 30px;
+/* Estilos para la barra de búsqueda */
+.navbar .form-inline {
+    flex-grow: 1;
+    justify-content: center;
+    margin-left: 230px;
 }
 
-.form-inline {
-    margin-right: 30px;
+.form-inline .form-control {
+    margin-right: 5px;
 }
 
-.btn-nav {
-    display: flex;
-    align-items: center;
+/* Estilos para los enlaces de navegación */
+
+.navbar-nav.ml-auto .nav-link {
+    padding: .5rem 1rem;
 }
 
-.nav-item {
-    margin-right: 10px;
+.navbar-nav .nav-link {
+    transition: color 0.3s, transform 0.3s;
 }
 
-.nav-link {
-    text-decoration: none;
-    color: #0e0e0e;
-    font-size: large;
-    transition: font-size 0.3s ease;
+.navbar-nav .nav-link:hover {
+    color: #28a745;
+    transform: scale(1.05);
 }
 
-.nav-link:hover {
-    color: #6bc5e9;
-    font-size: 22px;
+/* Ajustes para dispositivos móviles */
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: .5rem;
+    }
 }
 
-/* TABLAS */
-.table{
+.navbar-toggler {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-collapse .navbar-nav {
+        flex-basis: auto;
+    }
+}
+
+/* ----NUEVO CARDS OFERTAS---- */
+/* Estilos básicos para el contenedor y las tarjetas */
+.container-ofertas {
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.row-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.product-card-ofertas {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.product-img-ofertas {
+    width: 100%;
+    /* height: auto; */
+}
+
+.product-body {
+    padding: 15px;
     text-align: center;
 }
 
-.table td {
-    vertical-align: middle;
+.product-title {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-/* PRODUCTOS */
-.flex-container {
+/* Estilos para promociones y financiación */
+.product-promotions .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.badge-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.badge-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Estilos para la valoración con estrellas */
+.rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 18px;
+}
+
+.filled {
+    color: #ffc107;
+}
+
+/* Estilos para los precios */
+.pricing {
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-size: 18px;
+}
+
+.new-price {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.old-price {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.discount {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive design para dispositivos más pequeños */
+@media (max-width: 992px) {
+    .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/*-----FIN CARDS OFERTAS----- */
+
+/* -----------CAROUSEL DE PRODUCTOS-------- */
+.titulo-productos{
+    text-align: center;
+}
+.product-card-carousel {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-img-carousel{
+    width: 50%;
+}
+.product-body-carousel {
+    padding: 15px;
+    text-align: center;
+}
+.product-title-carousel {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.product-promotions-carousel .badge-carousel {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.owl-carousel-carousel {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.owl-carousel-carousel .item-carousel {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 200px;
 }
 
-.container-productos {
-    max-height: 600px;
-    width: 90%;
-    overflow-y: auto;
-}
+
+/* ------FIN CAROUSEL DE PRODUCTOS--------- */
 
 /* CAROUSEL */
 
-.owl-carousel{
+.owl-carousel {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .owl-carousel .item {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 200px; 
+    justify-content: center;
+    align-items: center;
+    height: 200px;
 }
 
 .owl-carousel .item img {
@@ -87,60 +245,70 @@ body, html {
     max-height: 40%;
     display: block;
 }
+/* FIN CAROUSEL DE PRODUTOS */
+/* PAGINA PRODUCTOS */
+#productos-container{
+    padding: 15px;
+}
+.product-card-ofertas img{
+    max-width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+/* FIN PAGINA DE PRODUCTOS */
+/* CONTENEDOR DE CONTACTO */
+#contenedor-contacto {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--color-primario);
+}
 
-    /* CONTENEDOR DE CONTACTO */
-    #contenedor-contacto {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        background-color: var(--color-primario);
-    }
+#contacto,
+#google-map {
+    width: calc(40% - 10px);
+    padding: 10px;
+}
 
-    #contacto,
-    #google-map {
-        width: calc(40% - 10px);       
-        padding: 10px;
-    }
+#contacto {
+    height: 450px;
+}
 
-    #contacto {
-        height: 450px;
-    }
+#google-map iframe {
+    width: 100%;
+    height: 450px;
+}
 
-    #google-map iframe {
-        width: 100%;
-        height: 450px;
-    }
+/* FORMULARIO */
 
-    /* FORMULARIO */
+#contacto {
+    padding-bottom: 60PX;
+}
 
-    #contacto {
-        padding-bottom: 60PX;
-    }
+/* BOTON FLOTANTE WHATSAPP */
 
-    /* BOTON FLOTANTE WHATSAPP */
+.wpp-float {
+    position: fixed;
+    width: 50px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
 
-    .wpp-float {
-        position: fixed;
-        width: 50px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        z-index: 100;
-    }
+.wpp-float img {
+    width: 100%;
+    height: auto;
+}
 
-    .wpp-float img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* FOOTER */
-    footer {
-        background-color: #f8f9fa;
-        padding: 20px;
-        bottom: 0;
-        text-align: center;
-        width: 100%;
-    }
+/* FOOTER */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
